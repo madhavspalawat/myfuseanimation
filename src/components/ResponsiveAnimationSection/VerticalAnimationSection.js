@@ -66,7 +66,7 @@ function VerticalAnimationSection() {
         lottieRef.current?.goToAndStop(effectiveFrames - 10, true);
       },
       onLeaveBack: () => {
-        lottieRef.current?.goToAndStop(0, true);
+        lottieRef.current?.goToAndStop(10, true);
       },
     });
   }, []);
