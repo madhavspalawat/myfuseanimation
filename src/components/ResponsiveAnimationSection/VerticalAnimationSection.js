@@ -15,6 +15,7 @@ function VerticalAnimationSection() {
   const [scrollHeight, setScrollHeight] = useState(0);
 
   useEffect(() => {
+    lottieRef.current?.goToAndStop(0, true);
     const gsapModule = require("gsap");
     const gsap = gsapModule.gsap || gsapModule;
     const ScrollTriggerModule = require("gsap/ScrollTrigger");
@@ -53,6 +54,9 @@ function VerticalAnimationSection() {
       scrub: 2,
       pin: pinnedRef.current,
       pinSpacing: false,
+      onEnter: () => {
+        lottieRef.current?.goToAndStop(0, true);
+      },
       onUpdate: (self) => {
         const progress = self.progress;
         const totalFrames = 1380;

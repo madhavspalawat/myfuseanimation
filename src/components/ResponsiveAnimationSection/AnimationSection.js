@@ -18,6 +18,7 @@ export default function AnimationSection() {
   const lottieRef = useRef(null);
 
   useEffect(() => {
+    lottieRef.current?.goToAndStop(0, true);
     if (typeof window === "undefined") return;
 
     // 1) Let container grow naturally (left text is tall).
@@ -31,6 +32,9 @@ export default function AnimationSection() {
       start: "top top",
       end: "bottom bottom",
       scrub: 2,
+      onEnter: () => {
+        lottieRef.current?.goToAndStop(0, true);
+      },
       onUpdate: (self) => {
         const progress = self.progress;
         const totalFrames = 1380;
