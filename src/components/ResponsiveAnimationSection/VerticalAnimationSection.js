@@ -85,6 +85,7 @@ function VerticalAnimationSection() {
                   className={`${styles.sectionItem} ${
                     index === sections.length - 1 ? styles.sectionItemLast : ""
                   }`}
+                  style={{ backgroundColor: "#F7F8FA" }}
                 >
                   <div className={styles.sectionText}>
                     <div className={styles.subtitle}>{item.subtitle}</div>

@@ -19,14 +19,6 @@ const ResponsiveAnimationSection = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <div
-        style={{
-          background: "#ff8c00",
-          width: "100%",
-          height: "25vh",
-          position: "relative",
-        }}
-      />
       <Suspense
         fallback={<div>Loading...</div>}
         style={{ position: "relative" }}
