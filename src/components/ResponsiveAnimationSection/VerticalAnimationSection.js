@@ -49,7 +49,7 @@ function VerticalAnimationSection() {
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${totalHeight - 1000}`,
+      end: `+=${totalHeight}px`,
       scrub: 2,
       pin: pinnedRef.current,
       pinSpacing: false,
