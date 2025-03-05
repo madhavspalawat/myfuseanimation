@@ -78,7 +78,11 @@ function VerticalAnimationSection() {
         {/* Text Section: occupies the top half */}
         <div className={styles.textSection}>
           <div className={styles.textWrapper}>
-            <div ref={textContentRef} className={styles.textContent}>
+            <div
+              ref={textContentRef}
+              className={styles.textContent}
+              style={{ backgroundColor: "#F7F8FA" }}
+            >
               {sections.map((item, index) => (
                 <div
                   key={index}
