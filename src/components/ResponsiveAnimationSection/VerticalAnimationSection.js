@@ -49,7 +49,7 @@ function VerticalAnimationSection() {
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${totalHeight}px`,
+      end: `+=${totalHeight - contentHeight}px`,
       scrub: 2,
       pin: pinnedRef.current,
       pinSpacing: false,
@@ -66,7 +66,7 @@ function VerticalAnimationSection() {
         lottieRef.current?.goToAndStop(effectiveFrames - 10, true);
       },
       onLeaveBack: () => {
-        lottieRef.current?.goToAndStop(10, true);
+        lottieRef.current?.goToAndStop(0, true);
       },
     });
   }, []);
