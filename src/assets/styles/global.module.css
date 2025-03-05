@@ -1,0 +1,113 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Colors from Tailwind Config */
+  --my-fuse-blue: #4d4dff;
+  --my-fuse-deep-blue: #3d3de0;
+  --my-fuse-yellow: #f9be59;
+  --my-fuse-light-gray: #b4bac9;
+  --my-fuse-black: #0f0f0f;
+  --my-fuse-slate: #535d79;
+  --my-fuse-lavender: #adadff;
+  --my-fuse-white: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Figtree", Arial, Helvetica, sans-serif;
+}
+
+/* Figtree - Regular & Italic */
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/Figtree/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/Figtree/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Plus Jakarta Sans - Regular & Italic */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Space Grotesk */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font Classes (Equivalent to Tailwind) */
+.figtree {
+  font-family: "Figtree", sans-serif;
+}
+
+.plus-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Dark Mode Utility */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--my-fuse-light-gray);
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--my-fuse-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+}

@@ -1,0 +1,1 @@
+export default { spacing: '16px' };
