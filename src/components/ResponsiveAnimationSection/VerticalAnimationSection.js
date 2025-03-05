@@ -26,7 +26,7 @@ function VerticalAnimationSection() {
     // the final element reaches the top half of the viewport.
     const contentHeight = textContentRef.current?.clientHeight || 0;
     const scrollDistance = contentHeight - window.outerHeight / 2;
-    const totalHeight = scrollDistance + window.innerHeight;
+    const totalHeight = scrollDistance + window.outerHeight;
     setScrollHeight(totalHeight);
     if (containerRef.current) {
       containerRef.current.style.height = `${totalHeight}px`;
@@ -40,7 +40,7 @@ function VerticalAnimationSection() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: `+=${totalHeight + 2000}px`,
+        end: `+=${totalHeight + contentHeight}px`,
         scrub: 0.1,
       },
     });
