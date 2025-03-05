@@ -40,7 +40,7 @@ function VerticalAnimationSection() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: `+=${totalHeight}`,
+        end: `+=${totalHeight + contentHeight}`,
         scrub: 0.1,
       },
     });
