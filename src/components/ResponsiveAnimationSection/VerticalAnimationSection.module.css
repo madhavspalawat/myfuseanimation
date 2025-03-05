@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   background-color: #f7f8fa;
+  height: 100vh;
   overflow: hidden;
 }
 
